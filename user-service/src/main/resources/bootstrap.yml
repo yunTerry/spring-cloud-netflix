@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: user
+      discovery:
+        enabled: true
+        serviceId: config-service

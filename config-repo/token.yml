@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: token-service
+server:
+  port: 2017
+management:
+  security:
+    enabled: false

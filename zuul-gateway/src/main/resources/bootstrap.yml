@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: zuul
+      discovery:
+        enabled: true
+        serviceId: config-service

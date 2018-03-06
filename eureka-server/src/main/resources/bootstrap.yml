@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      name: eureka
+      uri: http://localhost:3600

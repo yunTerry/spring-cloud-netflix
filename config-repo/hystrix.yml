@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: turbine
+server:
+  port: 5000
+management:
+  security:
+    enabled: false
+turbine:
+  app-config-list: admin,eureka-server,turbine,user-service,zuul,config-service

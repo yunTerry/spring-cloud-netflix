@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 4000
+management:
+  security:
+    enabled: false
+feign:
+  hystrix:
+    enabled: true
+# ratelimit configuration
+zuul:
+  ratelimit:
+    key-prefix: /user/**
+    enabled: true
+#    repository: Redis
+    behind-proxy: true
+    policy-list:
+      user-service:
+        - limit: 10 #optional - request number limit per refresh interval window
+          quota: 1000 #optional - request time limit per refresh interval window (in seconds)
+          refresh-interval: 60 #default value (in seconds)
+          type: #optional
+            - user
+            - origin
+            - url
+
+

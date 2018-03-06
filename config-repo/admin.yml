@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: admin
+spring.boot.admin:
+  routes:
+    endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
+  turbine:
+    clusters: default
+    location: turbine
+server:
+  port: 5033
+management:
+  security:
+    enabled: false

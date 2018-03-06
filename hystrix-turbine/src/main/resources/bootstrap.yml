@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: hystrix
+      discovery:
+        enabled: true
+        serviceId: config-service
