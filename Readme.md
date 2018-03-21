@@ -13,14 +13,6 @@ Hystrix服务容错保护/断路器，Spring Boot Admin服务管控
 
 ![服务注册中心](image/1.jpg)
 
-### admin-server 服务管控
-
-打开 http://localhost:5033
-
-![admin](image/2.jpg)
-
-![admin](image/3.jpg)
-
 ### config-server 配置中心
 
 该服务将git仓库中的配置文件以接口形式提供出去，客户端可以获取并加载配置。
@@ -50,6 +42,12 @@ Hystrix服务容错保护/断路器，Spring Boot Admin服务管控
     ]
 }
 ```
+
+### zuul 微服务网关
+
+用serviceId代替URL，实现动态路由
+
+通过Zuul过滤器进行请求鉴权认证，拦截不合法请求，同时也可以实现API限流操作。
 
 ### token-service 服务提供者
 
@@ -96,13 +94,27 @@ boolean verify(@RequestParam String token);
 }
 ```
 
-### zuul 微服务网关
+### admin-server 服务管控
 
-用serviceId代替URL，实现动态路由
+打开 http://localhost:5033
 
-通过Zuul过滤器进行请求鉴权认证，拦截不合法请求，同时也可以实现API限流操作
+![admin](image/2.jpg)
+
+![admin](image/3.jpg)
 
 
+### Zipkin 服务追踪
 
+在 http://localhost:5500/zipkin/ 可以查看服务链路追踪
 
+服务调用链路
 
+![](image/4.jpg)
+
+服务调用时间
+
+![](image/5.jpg)
+
+调用详情
+
+![](image/6.jpg)
