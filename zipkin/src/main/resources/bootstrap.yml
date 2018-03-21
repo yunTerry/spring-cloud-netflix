@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: zipkin
+      discovery:
+        enabled: true
+        serviceId: config-service

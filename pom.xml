@@ -32,6 +32,7 @@
         <module>user-service</module>
         <module>zuul-gateway</module>
         <module>hystrix-turbine</module>
+        <module>zipkin</module>
     </modules>
 
     <dependencies>
